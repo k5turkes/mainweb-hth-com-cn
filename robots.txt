@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://k5turkes.github.io/mainweb-hth-com-cn/sitemap.xml
