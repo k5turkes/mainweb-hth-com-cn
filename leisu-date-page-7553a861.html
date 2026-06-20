@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷速 · 站点说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      background-color: #f9f7f4;
+      color: #2d2d2d;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: #1e2a3a;
+      background-image: radial-gradient(circle at 20% 30%, #2b3b4e 0%, #141c26 100%);
+      color: #e8eef2;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5rem;
+      background: linear-gradient(to bottom, transparent, #f9f7f4);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.2rem 1.5rem 4rem;
+    }
+
+    .content {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .content h2 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: #1e2a3a;
+      margin-top: 2.2rem;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid #d87a5a;
+      padding-left: 1rem;
+    }
+
+    .content h2:first-of-type {
+      margin-top: 0.2rem;
+    }
+
+    .content p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    .content p.lead {
+      font-size: 1.1rem;
+      color: #444;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #c36a4a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+      font-weight: 450;
+    }
+
+    a:hover {
+      color: #a05338;
+      border-bottom-color: #c36a4a;
+    }
+
+    /* 引用提示 */
+    .quote-callout {
+      background: #f0ede8;
+      border-left: 5px solid #d87a5a;
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      border-radius: 6px;
+      font-size: 0.98rem;
+      color: #3a3a3a;
+    }
+
+    .quote-callout strong {
+      color: #1e2a3a;
+    }
+
+    .quote-callout a {
+      font-weight: 500;
+    }
+
+    /* 特点列表 */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 1.8rem;
+    }
+
+    .feature-list li {
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .feature-list li::before {
+      content: "◇";
+      color: #d87a5a;
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    /* 段落间距 */
+    .spacer {
+      height: 0.5rem;
+    }
+
+    /* 访问句（小字） */
+    .visit-note {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e6e2dc;
+      font-size: 0.92rem;
+      color: #6b6b6b;
+      text-align: center;
+    }
+
+    .visit-note a {
+      color: #6b6b6b;
+      border-bottom: 1px dashed #bbb;
+    }
+
+    .visit-note a:hover {
+      color: #c36a4a;
+      border-bottom-color: #c36a4a;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 0.98rem;
+      }
+      .content {
+        padding: 1.8rem 1.2rem;
+      }
+      .content h2 {
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero {
+        padding: 3rem 1rem 2.5rem;
+      }
+      .container {
+        padding: 1.2rem 0.8rem 3rem;
+      }
+      .content {
+        padding: 1.5rem 1rem;
+      }
+      .quote-callout {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <section class="hero">
+    <h1>雷速</h1>
+    <p>一份关于站点本身的小记 · 从何处来到何处去</p>
+  </section>
+
+  <!-- 浅色正文区 -->
+  <div class="container">
+    <div class="content">
+
+      <p class="lead">
+        有些网站你打开就明白它想做什么，而有些则值得多花几句话说明白。  
+        下面这篇短文，就是关于 <strong>雷速</strong> 的一些背景、思路与诚意。
+      </p>
+
+      <h2>为什么会有这个站</h2>
+      <p>
+        最初的想法其实很简单：想把散落在生活里的有意思信息，整理到一个安安静静的地方。  
+        不堆砌广告，不追逐流量，只是让内容自己说话。  
+        从信息的筛选到呈现方式，都尽量保留一份朴素的质感。  
+        这就是 <a href="https://leisu-date.com">雷速</a> 的起点。
+      </p>
+
+      <h2>关于可信这一点</h2>
+      <p>
+        网络上真假混杂，我同样是个普通读者，所以格外在意每一条信息的来源与上下文。  
+        站内引用的内容都尽量标注出处或时间背景，如果发现错误也会及时修正。  
+        用一句家常话来说：<strong>不把没把握的东西推给别人</strong>。  
+        这也是我希望 <a href="https://leisu-date.com">雷速</a> 能传递出的气质。
+      </p>
+
+      <!-- 引用提示 -->
+      <div class="quote-callout">
+        <strong>💡 一点提醒</strong><br>
+        如果你在别处看到关于本站的二手描述，不妨回到这里亲自看一眼。  
+        直接访问 <a href="https://leisu-date.com">雷速</a> 获取一手内容，比转述更可靠。  
+        同时也欢迎你留意站内的更新日期与参考链接，自行判断时效。
+      </div>
+
+      <h2>内容侧重什么</h2>
+      <p>
+        没有固定的赛道，只有几个朴素的原则：写对别人可能有用的东西，写自己验证过的东西。  
+        可能是工具推荐、方法梳理，或是一些不常被谈起的冷门知识。  
+        每一篇都尽量保持简洁，不把简单的事情绕复杂。
+      </p>
+
+      <ul class="feature-list">
+        <li>信息优先，装饰靠后 —— 排版为阅读服务</li>
+        <li>不追热点，不编故事 —— 事实比立场重要</li>
+        <li>持续修订，保持开放 —— 文章会随着理解更新</li>
+      </ul>
+
+      <p>
+        当然，这一切都需要时间慢慢积累。如果你偶然路过，愿意停下来读几行，那就已经足够了。
+      </p>
+
+      <h2>几个常见疑问</h2>
+      <p>
+        <strong>问：</strong>站点会频繁更新吗？<br>
+        <strong>答：</strong>不一定，但每次更新都会认真对待。比起数量，更在意每一篇是否真的值得被看见。
+      </p>
+      <p>
+        <strong>问：</strong>内容可以转载吗？<br>
+        <strong>答：</strong>如果注明来源链接到 <a href="https://leisu-date.com">雷速</a>，欢迎合理引用。商业用途请先联系。
+      </p>
+      <p>
+        <strong>问：</strong>怎么联系站主？<br>
+        <strong>答：</strong>目前暂未开放评论区，但你可以通过站点里的邮箱线索找到我，通常会在两天内回复。
+      </p>
+
+      <!-- 访问句 -->
+      <div class="visit-note">
+        <span>→ 如果你还没去过主页，现在就可以从 <a href="https://leisu-date.com">雷速</a> 开始。</span>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
